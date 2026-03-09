@@ -12,7 +12,11 @@ public class ClimateService {
     private final List<FarmData> farmDataList;
 
     public ClimateService() {
-        this.farmDataList = CsvFarmReader.readFarmsCsv();
+        this.farmDataList = new java.util.ArrayList<>(CsvFarmReader.readFarmsCsv());
+    }
+
+    public void addFarm(FarmData farm) {
+        this.farmDataList.add(farm);
     }
 
     public List<FarmData> getAllFarms() {
