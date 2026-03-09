@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { getFarms, getRisk, getOptimization } from '../services/api';
 import FarmTable from '../components/FarmTable';
@@ -15,7 +16,7 @@ const Dashboard = () => {
     useEffect(() => {
         const loadAllData = async () => {
             try {
-                // Load sequentially or Promise.all. Using Promise.all for speed.
+
                 const [farmsData, riskData, optData] = await Promise.all([
                     getFarms(),
                     getRisk(),
@@ -25,6 +26,7 @@ const Dashboard = () => {
                 setFarms(farmsData);
                 setRisks(riskData);
                 setOptimized(optData);
+
             } catch (err) {
                 setError(err.message);
             } finally {
