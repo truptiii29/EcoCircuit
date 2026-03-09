@@ -1,12 +1,12 @@
 {
-  "name": "chimaera-root",
+  "name": "ecocircuit-root",
   "version": "1.0.0",
-  "description": "Root startup script for Chimaera Fullstack",
+  "description": "Root startup script for EcoCircuit Fullstack",
   "scripts": {
-    "start:backend": "cd chimaera-backend && maven\\apache-maven-3.9.6\\bin\\mvn.cmd spring-boot:run",
-    "start:frontend": "cd chimaera-frontend && npm run dev -- --open",
-    "start:ai": "cd chimaera-ai && \"D:\\Coding accessories\\PythonIDLE\\python.exe\" app.py",
-    "start:quantum": "cd chimaera-quantum && \"D:\\Coding accessories\\PythonIDLE\\python.exe\" app.py",
+    "start:backend": "cd ecocircuit-backend && maven\\apache-maven-3.9.6\\bin\\mvn.cmd spring-boot:run",
+    "start:frontend": "cd ecocircuit-frontend && npm run dev -- --open",
+    "start:ai": "cd ecocircuit-ai && \"D:\\Coding accessories\\PythonIDLE\\python.exe\" app.py",
+    "start:quantum": "cd ecocircuit-quantum && \"D:\\Coding accessories\\PythonIDLE\\python.exe\" app.py",
     "start": "concurrently --kill-others -n \"backend,frontend,ai,quantum\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold,bgCyan.bold\" \"npm run start:backend\" \"npm run start:frontend\" \"npm run start:ai\" \"npm run start:quantum\""
   },
   "devDependencies": {

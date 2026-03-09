@@ -17,8 +17,8 @@ public class CsvFarmReader {
 
     public static List<FarmData> readFarmsCsv() {
         try (Reader reader = new BufferedReader(new InputStreamReader(
-                new ClassPathResource("data/farms.csv").getInputStream()))) {
-            
+                new ClassPathResource("ecosystem_data.csv").getInputStream()))) {
+
             return new CsvToBeanBuilder<FarmData>(reader)
                     .withType(FarmData.class)
                     .withIgnoreLeadingWhiteSpace(true)
