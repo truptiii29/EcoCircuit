@@ -4,7 +4,7 @@ from qiskit_aer import Aer
 from qiskit_optimization.applications import Maxcut
 from qiskit_algorithms import QAOA
 from qiskit_algorithms.optimizers import COBYLA
-from qiskit.primitives import Sampler
+from qiskit.primitives import StatevectorSampler as Sampler
 from qiskit_optimization.converters import QuadraticProgramToQubo
 
 app = Flask(__name__)
